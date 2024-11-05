@@ -1,5 +1,5 @@
 salarioBase = float(input('Informe seu salário base:'))
-totalVendas = int(input('Informe o valor total de suas vendas:'))
+totalVendas = float(input('Informe o valor total de suas vendas:'))
 percentualComissao = float(input('Informe o percentual da sua comissão (em decimais):'))
 
 # Calculando o valor da comissão
