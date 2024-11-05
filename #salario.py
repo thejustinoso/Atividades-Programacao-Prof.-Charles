@@ -3,7 +3,7 @@ totalVendas = float(input('Informe o valor total de suas vendas:'))
 percentualComissao = float(input('Informe o percentual da sua comissão (em decimais):'))
 
 # Calculando o valor da comissão
-comissao = totalVendas * percentualComissao
+comissao = totalVendas * percentualComissao / 100
 
 # Calculando o salário total
 salarioTotal = salarioBase + comissao
