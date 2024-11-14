@@ -1,14 +1,12 @@
-#computador de bordo
 
 horaPartida = str(input('Informe a hora da partida (ex: HH:MM):'))
 
 horaChegada = str(input('Informe a hora da chegada (ex: HH:MM):'))
 
-#Abaixo uso a ferramenta "split()" que permite dividir uma string em substrings identificando como separador o símbolo ":" para poder trabalhar com os dados separados de horas e minutos.
+#Abaixo uso a ferramenta "split()" que permite dividir uma string em substrings para poder trabalhar com os dados separados de horas e minutos.
 hsPartida, mnsPartida = horaPartida.split(":")
 hsChegada, mnsChegada = horaChegada.split(":")
 
-#Após separar os valores de minutor e horas, converto-os de string para float aqui abaixo.
 partidaHs = float(hsPartida)
 partidaMns = float(mnsPartida)
 chegadaHs = float(hsChegada)
@@ -29,24 +27,24 @@ precoCombustivel = float(input('Informe o preço do litro de combustível (em R$
 
 distancia = float(input('Informe a distância percorrida (em Kms):'))
 
-velMediaTotal = distancia / tempViagem
+velMediaTotal = distancia / (tempViagem / 3600)
 
-velMediaMov = distancia / (tempViagem - segDescanso)
+velMediaMov = (distancia / 1000) / (tempViagem  - segDescanso)
 
 custoViagem = consCombustivel * precoCombustivel
 
 desempenhoKmL = distancia / consCombustivel
 
-desempenhoLh = consCombustivel / tempViagem
+desempenhoLh = consCombustivel / (tempViagem / 3600)
 
 desempenhoRsKm = custoViagem / distancia
 
-print (f'Tempo de viagem de: {tempViagem:.2f} segs.')
+print (f'Tempo de viagem de: {tempViagem:.0f}segs.')
 
-print (f'Velocidade média total: {velMediaTotal:.2f} Km/h')
+print (f'Velocidade média total: {velMediaTotal:.1f}Km/h')
 
-print (f'Velocidade média em movimento: {velMediaMov:.2f} Km/h')
+print (f'Velocidade média em movimento: {velMediaMov:.1f}Km/h')
 
 print (f'Custo da viagem com combustível: R$ {custoViagem:.2f}.')
 
-print (f'Desempenho do carro: {desempenhoKmL:.2f} Km/L, {desempenhoLh:.2f}L/h, {desempenhoRsKm:.2f}R$/Km')
+print (f'Desempenho do carro: {desempenhoKmL:.2f}Km/L, {desempenhoLh:.2f}L/h, {desempenhoRsKm:.2f}R$/Km')
