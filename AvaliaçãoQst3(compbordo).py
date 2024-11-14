@@ -4,10 +4,11 @@ horaPartida = str(input('Informe a hora da partida (ex: HH:MM):'))
 
 horaChegada = str(input('Informe a hora da chegada (ex: HH:MM):'))
 
-#Abaixo uso a ferramenta "split()" que permite dividir uma string em substrings para poder trabalhar com os dados separados de horas e minutos.
+#Abaixo uso a ferramenta "split()" que permite dividir uma string em substrings identificando como separador o símbolo ":" para poder trabalhar com os dados separados de horas e minutos.
 hsPartida, mnsPartida = horaPartida.split(":")
 hsChegada, mnsChegada = horaChegada.split(":")
 
+#Após separar os valores de minutor e horas, converto-os de string para float aqui abaixo.
 partidaHs = float(hsPartida)
 partidaMns = float(mnsPartida)
 chegadaHs = float(hsChegada)
