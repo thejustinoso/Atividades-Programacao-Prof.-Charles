@@ -2,15 +2,21 @@
 
 horaPartida = str(input('Informe a hora da partida (ex: HH:MM):'))
 
-horaChegada = str(input('Informe a hora da partida (ex: HH:MM):'))
+horaChegada = str(input('Informe a hora da chegada (ex: HH:MM):'))
 
 #Abaixo uso a ferramenta "split()" que permite dividir uma string em substrings para poder trabalhar com os dados separados de horas e minutos.
 hsPartida, mnsPartida = horaPartida.split(":")
 hsChegada, mnsChegada = horaChegada.split(":")
 
-segsPartida = float(hsPartida * 3600) + float(mnsPartida * 60)
+partidaHs = float(hsPartida)
+partidaMns = float(mnsPartida)
+chegadaHs = float(hsChegada)
+chegadaMns = float(mnsChegada)
 
-segsChegada = float(hsChegada * 3600) + float(mnsChegada * 60)
+
+segsPartida = (partidaHs * 3600) + (partidaMns * 60)
+
+segsChegada = (chegadaHs * 3600) + (chegadaMns * 60)
 
 tempViagem = segsChegada - segsPartida
         
