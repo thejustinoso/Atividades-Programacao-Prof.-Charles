@@ -1,7 +1,8 @@
+horaPartida = str(input('Informe a hora da partida:'))
+minutosPartida = str(input('Informe os minutos da partida:'))
 
-horaPartida = str(input('Informe a hora da partida (ex: HH:MM):'))
-
-horaChegada = str(input('Informe a hora da chegada (ex: HH:MM):'))
+horaChegada = str(input('Informe a hora da chegada:'))
+minutosChegada = str(input('Informe os minutos da chegada:'))
 
 #Abaixo uso a ferramenta "split()" que permite dividir uma string em substrings para poder trabalhar com os dados separados de horas e minutos.
 hsPartida, mnsPartida = horaPartida.split(":")
@@ -17,6 +18,7 @@ segsPartida = (partidaHs * 3600) + (partidaMns * 60)
 
 segsChegada = (chegadaHs * 3600) + (chegadaMns * 60)
 
+#Calculando tempo de viagem
 tempViagem = segsChegada - segsPartida
         
 segDescanso = float(input('Informe os segundos parados para descanso:'))
@@ -27,16 +29,22 @@ precoCombustivel = float(input('Informe o preço do litro de combustível (em R$
 
 distancia = float(input('Informe a distância percorrida (em Kms):'))
 
+#Calculando a velocidade média total
 velMediaTotal = distancia / (tempViagem / 3600)
 
+#Calculando a velocidade média em movimento
 velMediaMov = (distancia / 1000) / (tempViagem  - segDescanso)
 
+#Calculando o custo total da viagem
 custoViagem = consCombustivel * precoCombustivel
 
+#Calculando o desempenho em Km/L
 desempenhoKmL = distancia / consCombustivel
 
+#Calculando o desempenho em L/h
 desempenhoLh = consCombustivel / (tempViagem / 3600)
 
+#Calculando o desempenho em R$/Km
 desempenhoRsKm = custoViagem / distancia
 
 print (f'Tempo de viagem de: {tempViagem:.0f}segs.')
