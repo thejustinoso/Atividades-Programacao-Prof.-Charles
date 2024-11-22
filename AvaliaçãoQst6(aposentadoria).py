@@ -1,3 +1,5 @@
+#Este código recebeu contribuição de IA para uso das bibliotecas.
+
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
