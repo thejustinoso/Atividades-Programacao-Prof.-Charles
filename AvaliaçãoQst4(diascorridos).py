@@ -3,20 +3,30 @@ mesInicial = int(input("Digite o mês inicial: "))
 diaFinal = int(input("Digite o dia final: "))
 mesFinal = int(input("Digite o mês final: "))
 
-if 1 <= diaInicial <= 31 and 1 <= diaFinal <= 31:
-        print ('Data inválida.')
-        SystemExit
-elif 1 <= mesInicial <= 12 and 1 <= mesFinal <= 12:
-        print ('Data inválida.')
-        SystemExit
+if (mesInicial = '01') or (mesFinalal = '01'):
+
+elif (mesInicial = '02') or (mesFinal = '02'):
+        
+elif (mesInicial = '03') or (mesFinal = '03'):
+
+elif (mesInicial = '04') or (mesFinal = '04'):
+        
+elif (mesInicial = '05') or (mesFinal = '05'):
+
+elif (mesInicial = '07') or (mesFinal = '06'):
+        
+elif (mesInicial = '08') or (mesFinal = '08'):
+
+elif (mesInicial = '08') or (mesFinal = '08'):
+        
+elif (mesInicial = '09') or (mesFinal = '09'):
+        
+elif (mesInicial = '10') or (mesFinal = '10'):
+        
+elif (mesInicial = '11') or (mesFinal = '11'):
+
+elif (mesInicial = '12') or (mesFinal = '12'):
+
 else:
-    if mesInicial > mesFinal or (mesInicial == mesFinal and diaInicial > diaFinal):
-        print("Data inicial deve ser menor ou igual à data final.")
+print ('Data inválida.')
         SystemExit
-    else:
-        # Identificando se um dos meses é de 30 dias
-        if mesInicial in ['04', '06', '09', '11'] or mesFinal in ['04', '06', '09', '11']:
-            a
-        # Identificando se um dos meses é Feveiro, mês com 28 dias
-        elif mesInicial == '02' or mesFinal == '02':
-            a
