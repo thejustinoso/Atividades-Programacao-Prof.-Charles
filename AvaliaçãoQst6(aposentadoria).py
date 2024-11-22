@@ -1,7 +1,7 @@
 #Este código recebeu contribuição de IA para uso das bibliotecas.
 
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
+from dateutil.relativedelta import relativedelta # type: ignore
 
 sexo = ('Informe seu sexo (M ou F):').strip().lower()
 nascimento = ('Informe sua data de nascimento no formato DD/MM/AAAA:').strip()
