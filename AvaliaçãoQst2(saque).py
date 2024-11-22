@@ -2,7 +2,7 @@ valor = float(input('Digite o valor do saque (decimal separado por ponto):'))
 
 if valor <= 0:
     print ('Digite um valor válido.')
-    SystemExit
+    exit()
 else:
 valor = float(input('Digite o valor do saque (decimal separado por ponto):'))
     # Convertendo o valor total em centavos para facilitar o cálculo
