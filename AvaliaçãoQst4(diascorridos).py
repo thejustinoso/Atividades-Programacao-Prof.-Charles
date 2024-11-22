@@ -6,13 +6,14 @@ mesFinal = int(input("Digite o mês final: "))
 if mesInicial == mesFinal:
     diasDecorridos = diaFinal - diaInicial
 else:
+    #O operador "in" é utilizado para verificar se um valor pertence a uma sequência.
     if mesInicial in [1, 3, 5, 7, 8, 10, 12]:
         diasDecorridos = ((mesFinal - mesInicial) * 31) - (diaFinal - diaInicial)
 
-    if mesInicial in [4, 6, 9, 11]:
+    elif mesInicial in [4, 6, 9, 11]:
         diasDecorridos = ((mesFinal - mesInicial) * 30) - (diaFinal - diaInicial)
 
-    elif mesInicial == '2':
+    elif mesInicial == '2' or mesFinal == '2' :
         diasDecorridos = ((mesFinal - mesInicial) * 28) - (diaFinal - diaInicial)
 
     else:
