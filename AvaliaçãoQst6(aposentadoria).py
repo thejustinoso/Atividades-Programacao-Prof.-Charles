@@ -28,8 +28,8 @@ elif sexo == 'F':
 
 else:
     print ('Sexo inválido.')
-    SystemExit
-
+    exit()
+    
 #Calculando as datas de aposentadoria
 dataAposentadoriaIdade = nascimento + relativedelta(years=idadeAposentadoria)
 dataAposentadoriaContribuicao = inicioContribuicao + relativedelta(years=tempoContribuicaoNecessario)
