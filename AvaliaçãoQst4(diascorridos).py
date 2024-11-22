@@ -3,30 +3,19 @@ mesInicial = int(input("Digite o mês inicial: "))
 diaFinal = int(input("Digite o dia final: "))
 mesFinal = int(input("Digite o mês final: "))
 
-if mesInicial == '01' or mesFinal == '01':
-
-elif mesInicial == '02' or mesFinal == '02':
-        
-elif mesInicial == '03' or mesFinal == '03':
-
-elif mesInicial == '04' or mesFinal == '04':
-        
-elif mesInicial == '05' or mesFinal == '05':
-
-elif mesInicial == '07' or mesFinal == '06':
-        
-elif mesInicial == '08' or mesFinal == '08':
-
-elif mesInicial == '08' or mesFinal == '08':
-        
-elif mesInicial == '09' or mesFinal == '09':
-        
-elif mesInicial == '10' or mesFinal == '10':
-        
-elif mesInicial == '11' or mesFinal == '11':
-
-elif mesInicial == '12' or mesFinal == '12':
-
+if mesInicial == mesFinal:
+    diasDecorridos = diaFinal - diaInicial
 else:
-    print ('Data inválida.'
-        SystemExit
+    if mesInicial in [1, 3, 5, 7, 8, 10, 12]:
+        diasDecorridos = ((mesFinal - mesInicial) * 31) - (diaFinal - diaInicial)
+
+    if mesInicial in [4, 6, 9, 11]:
+        diasDecorridos = ((mesFinal - mesInicial) * 30) - (diaFinal - diaInicial)
+
+    elif mesInicial == '2':
+        diasDecorridos = ((mesFinal - mesInicial) * 28) - (diaFinal - diaInicial)
+
+    else:
+        print ('Data inválida.')
+        exit()
+print(f"Quantidade de dias: {diasDecorridos}")
